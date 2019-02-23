@@ -92,13 +92,13 @@ home_player = nil
 largest_away_shoe = 0
 away_player = nil
   game_hash[:home][:players].each do |name, info_hash|
-    if  largest_home_shoe == 0 || < info_hash[:shoe]
+    if  largest_home_shoe == 0 || largest_home_shoe < info_hash[:shoe]
       largest_home_shoe = info_hash[:shoe]
       home_player = name
     end
   end
   game_hash[:home][:players].each do |name, info_hash|
-    if  largest_away_shoe == 0 || < info_hash[:shoe]
+    if  largest_away_shoe == 0 || largest_away_shoe < info_hash[:shoe]
       largest_away_shoe = info_hash[:shoe]
       away_player = name
     end
