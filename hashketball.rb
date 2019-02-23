@@ -102,6 +102,9 @@ away_player = nil
       largest_away_shoe = info_hash
       away_player = name
     end
- end
-
+  end
+  if largest_home_shoe > largest_away_shoe
+    return game_hash[:home][:players][home_player][:rebounds]
+  else
+    return game_hash[:away][:players][away_player][:rebounds]
 end
