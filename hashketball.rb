@@ -76,7 +76,10 @@ def player_numbers(name_of_team)
   return number_array
 end
 
-def player_stats
-
-
+def player_stats(player_stats)
+  if game_hash[:home][:players].has_key?(player_stats)
+    game_hash[:home][:players][player_stats]
+  elsif game_hash[:away][:players].has_key?(player_stats)
+    game_hash[:away][:players][player_stats]
+  end
 end
