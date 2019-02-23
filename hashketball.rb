@@ -107,4 +107,5 @@ away_player = nil
     return game_hash[:home][:players][home_player][:rebounds]
   else
     return game_hash[:away][:players][away_player][:rebounds]
+  end
 end
