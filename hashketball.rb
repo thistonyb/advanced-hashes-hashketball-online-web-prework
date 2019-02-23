@@ -89,9 +89,11 @@ def big_shoe_rebounds
 #associated with the player that has the largest shoe size.
 largest_home_shoe = 0
 home_player = nil
+largest_away_shoe = 0
+away_player = nil
   game_hash[:home][:players].each do |name, info_hash|
     if  largest_home_shoe == 0 || < info_hash[:shoe]
-      largest_shoe = info_hash
+      largest_home_shoe = info_hash
       home_player = name
     end
   end
